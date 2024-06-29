@@ -66,7 +66,7 @@ function addToCart() {
   } else {
     alert(newProduct.title + " added to cart");
     itemList.push(newProduct);
-        cartCount.textContent = itemList.length;
+    cartCount.textContent = itemList.length;
 
   }
   let newProductElement = createCartProduct(title, price, imgSrc);
