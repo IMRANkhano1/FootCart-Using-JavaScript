@@ -50,6 +50,7 @@ function changeQty() {
 
 let itemList = [];
 //add cart function
+let cartCount = document.querySelector(".cart-count");
 
 function addToCart() {
   let food = this.parentElement;
@@ -65,6 +66,8 @@ function addToCart() {
   } else {
     alert(newProduct.title + " added to cart");
     itemList.push(newProduct);
+        cartCount.textContent = itemList.length;
+
   }
   let newProductElement = createCartProduct(title, price, imgSrc);
   let element = document.createElement("div");
